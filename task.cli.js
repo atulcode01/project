@@ -14,7 +14,7 @@ if(commandOne === "add"){
     const newTask = {
         id: task.length + 1,
         description: taskDescription,
-        status: "todo"
+        status: "Started"
     };
     task.push(newTask);
     fs.writeFileSync("task.json",JSON.stringify(task,null,2));
@@ -34,4 +34,28 @@ if(commandOne === "delete"){
     console.log("task Deleted...");
 }
 
-
+if(commandOne === "done"){
+    const id = parseInt(process.argv[3])
+    const tasks = task.find(t => t.id === id)
+    if(task){
+        fs.writeFileSync("task.json", JSON.stringify(tasks, null, 2))
+        task.status = "Completed"
+    }else{
+        console.log("task not found");
+        
+    }
+    console.log("Status changed Successfully...");
+}
+if(commandOne === "continue"){
+    const id = parseInt(process.argv[3])
+    const tasks = task.find(t => t.id === id)
+    if(task){
+        fs.writeFileSync("task.json", JSON.stringify(tasks, null, 2))
+        task.status = "In Progress"
+    }else{
+        console.log("task not found");
+        
+    }
+    console.log("Status changed Successfully...");
+    
+}
