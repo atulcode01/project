@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "description": "first task created",
+    "status": "todo"
+  },
+  {
+    "id": 2,
+    "description": "practicing qoestions ",
+    "status": "todo"
+  },
+  {
+    "id": 3,
+    "description": "3rd task is here",
+    "status": "todo"
+  }
+]
