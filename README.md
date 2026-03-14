@@ -11,9 +11,11 @@ You can add tasks, list them, mark them as completed or in progress, and delete 
 * Delete tasks
 * Mark tasks as completed
 * Mark tasks as in progress
-* Stores tasks locally in a JSON file
-
 ---
+Previously, tasks were stored in the project directory, which caused issues when running the CLI from different locations in the terminal. By moving the storage to the user's home directory:-
+Tasks remain accessible from any directory
+Data persists independently of the project folder
+The CLI behaves more like professional command-line tools
 
 ## Installation
 
@@ -72,4 +74,5 @@ task continue 1
 ```
 ---
 ```
+If the .task-cli directory or task.json file does not exist, the program automatically creates them.
 Learning project for understanding Node.js CLI development.
