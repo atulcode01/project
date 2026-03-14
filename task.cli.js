@@ -1,8 +1,14 @@
 #!/usr/bin/env node
 const { log } = require("console");
 const fs = require("fs");
+const path = require("path");
 
-const data = fs.readFileSync("task.json", "utf-8");
+const filePath = path.join(__dirname, "task.json"); 
+// here it is assigning the currnet path of task.json to the data to read file 
+
+const data = fs.readFileSync(filePath, "utf-8"); 
+// here the file can read the currnt path of task.json 
+
 const task = JSON.parse(data);
 
 //task add "first task"
