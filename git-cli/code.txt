@@ -1,0 +1,8 @@
+here it will fetch the data from the github server 
+github server will give the api call 
+respond with json data
+extract the event and the ser name from it 
+display it in the cli 
+and chekc if user not found and api fails 
+
+there will be 2 folders as bin that will have github activity and will have github fetch response
